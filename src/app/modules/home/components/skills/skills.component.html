@@ -1,0 +1,110 @@
+<div id="habilidades" class="home__wrapper__skills">
+  <h3 class="home__wrapper__skills__title">
+    Habilidades
+    <button
+      type="button"
+      class="btn text-light btn-lg addStudy"
+      style="background-color: tomato"
+      data-bs-toggle="modal"
+      data-bs-target="#addSkill"
+      disabled
+    >
+      +
+    </button>
+  </h3>
+
+  <div class="home__wrapper__skills__list">
+    <div class="home__wrapper__skills__list__frontend">
+      <h3 class="home__wrapper__skills__list__title">Frontend</h3>
+      <mat-card *ngFor="let skill of skills.frontend">
+        <mat-card-content>
+          <mat-progress-spinner
+            class="example-margin"
+            color="warn"
+            mode="determinate"
+            value="{{ skill.progress }}"
+          >
+          </mat-progress-spinner>
+        </mat-card-content>
+        <a href="{{ skill.link }}" target="_blank" class="mat-mdc-card__title">
+          {{ skill.title }}</a
+        >
+      </mat-card>
+    </div>
+
+    <div class="home__wrapper__skills__list__backend">
+      <h3 class="home__wrapper__skills__list__title">Backend</h3>
+      <mat-card *ngFor="let skill of skills.backend">
+        <mat-card-content>
+          <mat-progress-spinner
+            class="example-margin"
+            color="primary"
+            mode="determinate"
+            value="{{ skill.progress }}"
+          >
+          </mat-progress-spinner>
+        </mat-card-content>
+        <a href="{{ skill.link }}" target="_blank" class="mat-mdc-card__title">
+          {{ skill.title }}</a
+        >
+      </mat-card>
+    </div>
+    <div class="home__wrapper__skills__list__otros">
+      <h3 class="home__wrapper__skills__list__title">Otros</h3>
+      <mat-card *ngFor="let skill of skills.otros">
+        <mat-card-content>
+          <mat-progress-spinner
+            class="example-margin"
+            color="accent"
+            mode="determinate"
+            value="{{ skill.progress }}"
+          >
+          </mat-progress-spinner>
+        </mat-card-content>
+
+        <a href="{{ skill.link }}" target="_blank" class="mat-mdc-card__title">
+          {{ skill.title }}</a
+        >
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="addSkill"
+  tabindex="-1"
+  aria-labelledby="addSkillLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 m-0" id="addSkillLabel">Agregar Skill</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form class="modal-body">
+        <input type="text" placeholder="name" class="form-control my-2" />
+        <input name="range" type="range" class="form-range my-2" />
+        <select class="form-select my-2">
+          <option>Frontend</option>
+          <option>Backend</option>
+          <option>Otros</option>
+        </select>
+
+        <button
+          type="submit"
+          class="btn btn-block w-100 text-light"
+          style="background-color: tomato"
+        >
+          Agregar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

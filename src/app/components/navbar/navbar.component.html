@@ -1,0 +1,52 @@
+<nav class="nav">
+  <a routerLink="/" class="nav__logotype">
+    <img src="assets/og.png" alt="og-developer" class="nav__logotype__img" />
+  </a>
+
+  <ul class="nav__navegation">
+    <li class="nav__navegation__item">
+      <a href="/#sobre-mi" title="Sobre mí"
+        ><mat-icon>portrait</mat-icon>Sobre mi</a
+      >
+    </li>
+    <li class="nav__navegation__item">
+      <a href="/#trabajos" title="Trabajos"
+        ><mat-icon>work_outline</mat-icon>Trabajos</a
+      >
+    </li>
+    <li class="nav__navegation__item">
+      <a href="/#estudios" title="Estudios"
+        ><mat-icon> table_chart</mat-icon>Estudios</a
+      >
+    </li>
+    <li class="nav__navegation__item">
+      <a href="/#habilidades"><mat-icon> timeline</mat-icon>Habilidades</a>
+    </li>
+
+    <li class="nav__navegation__item">
+      <a routerLink="/login" title="Contacto" *ng-if="false"
+        ><mat-icon> logout</mat-icon>Salir</a
+      >
+
+      <a routerLink="/login" title="Contacto"
+        ><mat-icon>login</mat-icon>Login</a
+      >
+    </li>
+  </ul>
+
+  <ul class="nav__redes">
+    <a
+      href="https://twitter.com/oct1_gauna"
+      target="_blank"
+      class="nav__redes__link"
+      ><img src="assets/redes/twitter.svg" alt="if a facebook"
+    /></a>
+
+    <a
+      href="https://www.linkedin.com/in/octavio-gauna-62b0a2202/"
+      target="_blank"
+      class="nav__redes__link"
+      ><img src="assets/redes/linkedin.svg" alt="if a facebook"
+    /></a>
+  </ul>
+</nav>

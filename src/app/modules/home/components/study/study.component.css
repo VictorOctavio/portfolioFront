@@ -1,0 +1,109 @@
+/* MY STUDIES */
+.home__wrapper__studies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.addStudy {
+  position: absolute;
+  top: -80%;
+  right: 0;
+  border-radius: 50%;
+}
+
+.home__wrapper__studies__title {
+  font-size: 2em;
+  color: tomato;
+  font-weight: bold;
+  margin-bottom: 1em;
+  position: relative;
+  width: 100%;
+}
+
+.home__wrapper__studies__list {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  overflow: auto;
+  gap: 0.5em;
+}
+
+.home__wrapper__studies__list__item {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 20% 75%;
+  gap: 15px;
+  background-color: var(--bg-nav-color);
+  position: relative;
+}
+
+.home__wrapper__studies__list__item__img {
+  background-size: cover;
+  background-position: center;
+}
+
+.home__wrapper__studies__list__item__info {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home__wrapper__studies__list__item__info__title {
+  color: white;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+}
+.home__wrapper__studies__list__item__info__title__time {
+  font-size: 0.6em;
+  color: tomato;
+}
+
+.home__wrapper__studies__list__item__info__description {
+  color: var(--font-color);
+  font-size: 1em;
+}
+
+.btn-remove-study {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* MEDIA QUER */
+
+@media (max-width: 600px) {
+  .home__wrapper__studies {
+    font-size: 12px;
+  }
+
+  /* Studies */
+  .home__wrapper__studies__list__item {
+    grid-template-columns: 1fr;
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+  }
+
+  .home__wrapper__studies__list__item__img {
+    position: absolute;
+    height: 130%;
+    width: 30%;
+    opacity: 0.1;
+    top: -35px;
+    left: -40px;
+    transform: rotateZ(20deg);
+  }
+}
+
+@media (max-width: 450px) {
+  .home__wrapper__studies {
+    font-size: 12px;
+  }
+}

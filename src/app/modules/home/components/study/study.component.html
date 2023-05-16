@@ -1,0 +1,124 @@
+<div id="estudios" class="home__wrapper__studies">
+  <h3 class="home__wrapper__studies__title">
+    Estudios
+
+    <button
+      type="button"
+      class="btn text-light btn-lg addStudy"
+      style="background-color: tomato"
+      data-bs-toggle="modal"
+      data-bs-target="#addStudy"
+    >
+      +
+    </button>
+  </h3>
+
+  <div class="home__wrapper__studies__list">
+    <div
+      class="home__wrapper__studies__list__item"
+      *ngFor="let study of studies"
+    >
+      <div
+        class="home__wrapper__studies__list__item__img"
+        style="
+           background-image: url({{ study.imageURL }});
+         "
+      ></div>
+      <div class="home__wrapper__studies__list__item__info">
+        <a
+          class="home__wrapper__studies__list__item__info__title"
+          href="{{ study.url }}"
+          target="_blank"
+        >
+          {{ study.title }}
+          <span class="home__wrapper__studies__list__item__info__title__time">
+            {{ study.initDate }} -- {{ study.finishDate }}
+          </span>
+        </a>
+        <p class="home__wrapper__studies__list__item__info__description">
+          {{ study.description }}
+        </p>
+      </div>
+
+      <button
+        class="mx-1 btn btn-danger btn-remove-study"
+        (click)="removeStudy(study.id)"
+      >
+        x
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="addStudy"
+  tabindex="-1"
+  aria-labelledby="addStudyLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 m-0" id="addStudyLabel">Agregar Estudio</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form class="modal-body" (ngSubmit)="addStudy()">
+        <input
+          type="text"
+          placeholder="name"
+          name="title"
+          class="form-control my-2"
+          [(ngModel)]="study.title"
+        />
+        <input
+          type="text"
+          name="description"
+          placeholder="description"
+          class="form-control my-2"
+          [(ngModel)]="study.description"
+        />
+        <input
+          type="text"
+          name="imageURL"
+          placeholder="imageURL"
+          class="form-control my-2"
+          [(ngModel)]="study.imageURL"
+        />
+        <input
+          type="text"
+          name="url"
+          placeholder="URL"
+          class="form-control my-2"
+          [(ngModel)]="study.url"
+        />
+        <input
+          placeholder="inicio"
+          name="initDate"
+          type="date"
+          class="form-control my-2"
+          [(ngModel)]="study.initDate"
+        />
+        <input
+          placeholder="final"
+          name="finishDate"
+          type="date"
+          class="form-control my-2"
+          [(ngModel)]="study.finishDate"
+        />
+        <button
+          type="submit"
+          class="btn btn-block w-100 text-light"
+          style="background-color: tomato"
+        >
+          Agregar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

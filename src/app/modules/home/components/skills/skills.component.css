@@ -1,0 +1,84 @@
+/* MY SKILLS */
+.home__wrapper__skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.home__wrapper__skills__title {
+  color: tomato;
+  font-weight: bold;
+  font-size: 2em;
+  position: relative;
+  width: 100%;
+}
+
+.addStudy {
+  position: absolute;
+  top: -80%;
+  right: 0;
+  border-radius: 50%;
+}
+
+.home__wrapper__skills__list {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home__wrapper__skills__list__frontend,
+.home__wrapper__skills__list__backend,
+.home__wrapper__skills__list__otros {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  position: relative;
+  min-width: 100%;
+  background-color: var(--bg-nav-color);
+}
+
+.home__wrapper__skills__list__title {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  z-index: 99;
+  font-size: 1em;
+}
+
+.home__wrapper__skills__list .mat-mdc-card {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7em;
+}
+
+.mat-mdc-card__title {
+  margin-top: 10px;
+  color: var(--font-color);
+  text-transform: capitalize;
+}
+
+/* MEDIA QUER */
+
+@media (max-width: 600px) {
+  .home__wrapper__skills {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .home__wrapper__skills {
+    font-size: 12px;
+  }
+}

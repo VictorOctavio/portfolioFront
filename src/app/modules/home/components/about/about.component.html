@@ -1,0 +1,67 @@
+<!-- About Home -->
+<div id="sobre-mi" class="home__wrapper__about">
+  <div class="home__wrapper__about__info">
+    <button
+      type="button"
+      class="btn text-light btn-lg btn-edit"
+      style="background-color: tomato"
+      data-bs-toggle="modal"
+      data-bs-target="#addProject"
+    >
+      <mat-icon>editnote</mat-icon>
+    </button>
+
+    <h6 class="home__wrapper__about__info__important">Hola, soy</h6>
+    <h3 class="home__wrapper__about__info__title">
+      {{ user.lastName }} {{ user.firstName }}
+    </h3>
+    <h6 class="home__wrapper__about__info__important">Developer</h6>
+    <p class="home__wrapper__about__info__p">
+      {{ user.description }}
+    </p>
+  </div>
+  <div class="home__wrapper__about__photo"></div>
+</div>
+
+<div
+  class="modal fade"
+  id="addProject"
+  tabindex="-1"
+  aria-labelledby="addProjectLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 m-0" id="addProjectLabel">
+          Editar Sobre mí
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form class="modal-body" (ngSubmit)="updateData()">
+        <textarea
+          class="form-control"
+          placeholder="descripción"
+          style="min-height: 50vh"
+          id="description"
+          name="description"
+          [(ngModel)]="user.description"
+          [value]="user.description"
+        >
+        </textarea>
+        <button
+          type="submit"
+          class="btn btn-block w-100 text-light my-2"
+          style="background-color: tomato"
+        >
+          Agregar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

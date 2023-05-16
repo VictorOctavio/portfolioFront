@@ -1,0 +1,131 @@
+{
+  "name": "Octavio",
+  "surname": "Gauna",
+  "photoURL": "",
+  "ocupation": "Full Stack Developer",
+  "about": "Soy estudiante avanzado de sistema y soy un apasionado de la tecnología con sede en Argentina. Como desarrollador full stack web, he adquirido habilidades y conocimientos tanto en el lado del front-end como en el del back-end, lo que me permite crear soluciones completas y personalizadas para los clientes. Además, estoy constantemente buscando oportunidades para aprender y mejorar mis habilidades, y me encanta trabajar en equipo para alcanzar los objetivos de los proyectos. Me enorgullece crear soluciones innovadoras y eficientes para problemas complejos y estoy emocionado de seguir creciendo en el campo de la tecnología.",
+  "ubication": "Corrientes, Arg",
+  "studies": [
+    {
+      "title": "Licenciatura en Sistemas",
+      "imageURL": "https://files.cercomp.ufg.br/weby/up/1/o/Logo-UNNE.jpg?1432060331",
+      "description": "Estudiante avanzado tercer año.",
+      "link": "https://www.udemy.com/course/diseno-web/",
+      "date": "2021-"
+    },
+    {
+      "title": "Desarrollo Web Profesional",
+      "imageURL": "https://img-c.udemycdn.com/course/240x135/782428_b5cf_4.jpg",
+      "description": " HTML5, CSS3, Responsive Design, Figma, SASS, JavaScript, jQuery, Bootstrap 5, WordPress, Git, GitHub",
+      "link": "https://www.udemy.com/course/diseno-web/",
+      "date": "2020-2021"
+    },
+    {
+      "title": "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS",
+      "imageURL": "https://img-c.udemycdn.com/course/240x135/1337000_0d99.jpg",
+      "description": "Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS",
+      "link": "https://www.udemy.com/course/master-en-javascript-aprender-js-jquery-angular-nodejs-y-mas/",
+      "date": "2020-2021"
+    },
+    {
+      "title": "React JS ¡Desde Cero! Vite, Hooks ",
+      "imageURL": "https://img-c.udemycdn.com/course/750x422/2889734_1f10_6.jpg",
+      "description": "Aprende React JS paso a paso este 2023, Creando proyectos SPA con Login, React Hooks, Redux, Context API & Firebase.",
+      "link": "https://www.udemy.com/course/curso-react-js/",
+      "date": "2021-2022"
+    }
+  ],
+  "projects": [
+    {
+      "title": "USEDCARS",
+      "description": "Publica tu auto en venta de forma gratuita y recibe multiples ofertas",
+      "link": "https://www.usecars.com/",
+      "stack": "React-Mongodb",
+      "imageURL": "assets/projects/4x4.jpg"
+    },
+    {
+      "title": "USEDGAMING",
+      "description": "Publica tus componentes/perifericos en venta de forma gratuita y recibe multiples ofertas",
+      "link": "https://www.usedgaming.com/",
+      "stack": "React-Mongodb",
+      "imageURL": "assets/projects/gaming.jpg"
+    },
+    {
+      "title": "NOTIGAMING",
+      "description": "Informaté de las ultimas noticias en gaming con nosotros",
+      "link": "https://www.noti.com/",
+      "stack": "React-Firebase",
+      "imageURL": "assets/projects/noti.jpg"
+    },
+    {
+      "title": "NOTIGAMING",
+      "description": "Informaté de las ultimas noticias en gaming con nosotros",
+      "link": "https://www.noti.com/",
+      "stack": "React-Firebase",
+      "imageURL": "assets/projects/noti.jpg"
+    }
+  ],
+  "skills": {
+    "frontend": [
+      {
+        "title": "React JS",
+        "progress": 72,
+        "link": "https:react.org"
+      },
+      {
+        "title": "Typescript",
+        "progress": 67,
+        "link": "https:react.org"
+      },
+      {
+        "title": "Angular",
+        "progress": 53,
+        "link": "https:react.org"
+      }
+    ],
+    "backend": [
+      {
+        "title": "Mongodb",
+        "progress": 64,
+        "link": "https:react.org"
+      },
+      {
+        "title": "Java",
+        "progress": 53,
+        "link": "https:react.org"
+      },
+      {
+        "title": "Nest JS",
+        "progress": 62,
+        "link": "https:react.org"
+      },
+      {
+        "title": "MySql",
+        "progress": 51,
+        "link": "https:react.org"
+      },
+      {
+        "title": "Firebase",
+        "progress": 56,
+        "link": "https:react.org"
+      },
+      {
+        "title": "Node Js",
+        "progress": 63,
+        "link": "https:react.org"
+      }
+    ],
+    "otros": [
+      {
+        "title": "AdobeXD",
+        "progress": 55,
+        "link": "https:react.org"
+      },
+      {
+        "title": "English",
+        "progress": 50,
+        "link": "https:react.org"
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+<div id="trabajos" class="home__wrapper__works">
+  <h3 class="home__wrapper__works__title">
+    Trabajos Realizados
+
+    <button
+      type="button"
+      class="btn text-light btn-lg addProject"
+      style="background-color: tomato"
+      data-bs-toggle="modal"
+      data-bs-target="#newProject"
+    >
+      +
+    </button>
+  </h3>
+
+  <div class="home__wrapper__works__list">
+    <div
+      *ngFor="let project of projects"
+      class="home__wrapper__works__list__item"
+    >
+      <img
+        src="{{ project.imageURL }}"
+        class="home__wrapper__works__list__item__img"
+      />
+      <div class="home__wrapper__works__list__item__info">
+        <h4 class="home__wrapper__works__list__item__info__title">
+          {{ project.name }}
+        </h4>
+        <p class="home__wrapper__works__list__item__info__stack">
+          Stack: {{ project.tecnologies }}
+        </p>
+
+        <p class="home__wrapper__works__list__item__info__description">
+          {{ project.description }}
+        </p>
+
+        <div>
+          <a href="{{ project.url }}" target="_blank" class="btn btn-light"
+            >Ir al Sitio</a
+          >
+          <button
+            class="mx-1 btn btn-danger"
+            (click)="deleteProject(project.id)"
+          >
+            x
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="home__wrapper__works__btn__right"
+      id="btnleft"
+      (click)="handleRight()"
+    >
+      >
+    </button>
+    <button class="home__wrapper__works__btn__left" (click)="handleLeft()">
+      <
+    </button>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="newProject"
+  tabindex="-1"
+  aria-labelledby="newProjectLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 m-0" id="newProjectLabel">
+          Agregar Proyecto
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form class="modal-body" (ngSubmit)="addProject()">
+        <input
+          [(ngModel)]="project.name"
+          type="text"
+          placeholder="Nombre"
+          class="form-control my-2"
+          name="name"
+        />
+        <input
+          type="text"
+          placeholder="Tecnologias"
+          class="form-control my-2"
+          [(ngModel)]="project.tecnologies"
+          name="tecnologies"
+        />
+        <input
+          [(ngModel)]="project.description"
+          type="text"
+          placeholder="Descipción"
+          class="form-control my-2"
+          name="description"
+        />
+
+        <input
+          [(ngModel)]="project.url"
+          type="text"
+          placeholder="URL"
+          class="form-control my-2"
+          name="url"
+        />
+
+        <input
+          [(ngModel)]="project.imageURL"
+          type="text"
+          placeholder="imgURL"
+          class="form-control my-2"
+          name="imageURL"
+        />
+
+        <button
+          type="submit"
+          class="btn btn-block w-100 text-light"
+          style="background-color: tomato"
+        >
+          Agregar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

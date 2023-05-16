@@ -1,0 +1,47 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button {
+  border: none;
+}
+
+:root {
+  --bg-nav-color: #131313;
+  --bg-color: #161616;
+  --font-color: #747474;
+}
